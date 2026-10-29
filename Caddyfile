@@ -1,8 +1,8 @@
 {
   order forward_proxy before file_server
 }
-:443, example.com {
-  tls admin@example.com
+:443, YOUR_EXIT_DOMAIN {
+  tls admin@YOUR_EXIT_DOMAIN
   forward_proxy {
     basic_auth ru-chain YOUR_BRIDGE_PASSWORD
     hide_ip
