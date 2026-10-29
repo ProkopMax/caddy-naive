@@ -1,0 +1,18 @@
+---
+services:
+  caddy-naive:
+    build: .
+    container_name: caddy-naive
+    restart: unless-stopped
+    network_mode: host
+    environment:
+      - XDG_DATA_HOME=/data
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - ./www:/var/www/html:ro
+      - caddy_data:/data
+      - caddy_logs:/var/log/caddy
+
+volumes:
+  caddy_data:
+  caddy_logs:
