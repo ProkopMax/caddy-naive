@@ -1,4 +1,5 @@
 YOUR_BRIDGE_PASSWORD openssl rand -base64 24
+
 YOUR_EXIT_DOMAIN example.com
 
 docker compose up -d --build
